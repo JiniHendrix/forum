@@ -19,4 +19,10 @@ router.get('/signup', (req, res) => {
   });
 });
 
+router.get(/css$/, (req, res) => {
+  fs.readFile(path.join(__dirname, '../../client/styles.css'), (err, css) => {
+    res.set({'Content-Type':'text/css'}).send(css);
+  });
+});
+
 module.exports = router;
