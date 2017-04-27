@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   res.redirect('/login');
-})
+});
 
 router.get('/login', (req, res) => {
   fs.readFile(path.join(__dirname, '../../client/login.html'), (err, html) => {
