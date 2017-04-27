@@ -1,0 +1,12 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.schema;
+
+const commentSchema = new Schema({
+  creatorId: Number,
+  message: String,
+  createdAt: Date,
+  editedAt: Date,
+  edited: Boolean
+});
+
+module.exports = mongoose.model('Comment', commentSchema);

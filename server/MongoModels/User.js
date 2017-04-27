@@ -7,6 +7,7 @@ const userSchema = new Schema({
   threads: [],
   comments: [],
   profilePic: Buffer,
+  joinedDate: Date
 });
 
 module.exports = mongoose.model('User', userSchema);
