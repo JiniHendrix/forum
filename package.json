@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/JiniHendrix/forum/issues"
   },
-  "homepage": "https://github.com/JiniHendrix/forum#readme"
+  "homepage": "https://github.com/JiniHendrix/forum#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "mongod": "^2.0.0",
+    "mongoose": "^4.9.6"
+  }
 }
