@@ -1,0 +1,19 @@
+{
+  "name": "forum",
+  "version": "1.0.0",
+  "description": "basic forum for DB and bootstrap practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JiniHendrix/forum.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JiniHendrix/forum/issues"
+  },
+  "homepage": "https://github.com/JiniHendrix/forum#readme"
+}
