@@ -6,5 +6,7 @@ const userSchema = new Schema({
   password: String,
   threads: [],
   comments: [],
+  profilePic: Buffer,
 });
 
+module.exports = mongoose.model('User', userSchema);
