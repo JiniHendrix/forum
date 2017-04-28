@@ -4,10 +4,11 @@ const path = require('path');
 const router = express.Router();
 
 router.get('/', (req, res) => {
+  console.log('/')
   res.redirect('/login');
 });
 
-router.get('/login', (req, res) => {
+router.get('/login', (req, res) => { console.log('login')
   fs.readFile(path.join(__dirname, '../../client/login.html'), (err, html) => {
     res.set({'Content-Type':'text/html'}).send(html);
   });
@@ -19,10 +20,9 @@ router.get('/signup', (req, res) => {
   });
 });
 
-router.get(/css$/, (req, res) => {
-  fs.readFile(path.join(__dirname, '../../client/styles.css'), (err, css) => {
-    res.set({'Content-Type':'text/css'}).send(css);
-  });
+router.post('/signup', (req, res) => {
+  console.log('hello'); 
+  res.redirect('/forum');
 });
 
 module.exports = router;
