@@ -1,0 +1,29 @@
+main {
+  border: 1px solid black;
+  border-radius: 5px;
+  position:relative;
+}
+
+.login-container {
+  margin-left: auto;
+  margin-right: auto;
+  height:300px;
+  width:400px;
+}
+
+.login-input {
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  position: absolute;
+  bottom:5px;
+}
+.vertical-align {
+  min-height:100%;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+}
