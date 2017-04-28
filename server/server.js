@@ -3,10 +3,10 @@ const app = express();
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const path = require('path');
+const userCtrl = require('./MongoControllers/UserController');
 const port = process.env.PORT || 3000;
-// const login = require('./routers/loginRouter');
-// const forum = require('./routers/forumRouter');
 
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
@@ -19,16 +19,15 @@ app.get('/login', (req, res) => {
   });
 });
 
+app.post('/login', userCtrl.login);
+
 app.get('/signup', (req, res) => {
   fs.readFile(path.join(__dirname, '../client/signup.html'), (err, html) => {
     res.set({'Content-Type':'text/html'}).send(html);
   });
 });
 
-app.post('/signup', (req, res) => {
-  console.log(req.body);
-  res.redirect('/forum');
-});
+app.post('/signup', userCtrl.createUser);
 
 app.get('/forum', (req, res) => {
   fs.readFile(path.join(__dirname, '../client/forum.html'), (err, html) => {
