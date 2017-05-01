@@ -3,7 +3,7 @@ const app = express();
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const path = require('path');
-const userCtrl = require('./MongoControllers/UserController');
+const userCtrl = require('./Mongo/MongoControllers/UserController');
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: false }))
